@@ -2,11 +2,11 @@
 div
     .subtitle Mes travaux !
     #project
-        .content(v-on:click="inv('acad')" v-bind:class="{true : acad}")
+        a.content(href="https://drive.google.com/drive/folders/1VRFouVDus7-Nduce0taKASA48JzbryUc" target="_blank")
             center.text Dessins academiques
-        .content(v-on:click="inv('perso')" v-bind:class="{true : perso}")
+        a.content(href="https://drive.google.com/drive/folders/1kh31KCmW96h6rLupyKe3A4uGadWDhbkC" target="_blank")
             center.text Dessins personnelles
-        .content(v-on:click="inv('other')" v-bind:class="{true : other}")
+        a.content(href="https://drive.google.com/drive/folders/1WTgfRGAjQ0ZeNoC2bg_TUhi_JfjHMmyK" target="_blank")
             center.text Autres travaux
 
     
@@ -19,22 +19,6 @@ export default {
         return {
         }
     },
-    computed: {
-        acad () {
-            return this.$store.state.main.acad
-        },
-        perso () {
-            return this.$store.state.main.perso
-        },
-        other () {
-            return this.$store.state.main.other
-        },
-    },
-    methods:{
-        inv(e){
-            this.$store.commit(`main/invert${e}`)
-        }
-    }
 }
 </script>
 
@@ -57,9 +41,12 @@ div.subtitle
     align-items: center
     @media screen and (max-width: $tablet) 
         flex-direction: column 
+        flex-wrap: wrap
+        gap: 10px
         padding: calc(5vh + 45px) calc(5vw + 25px)
     @media screen and (min-width: $tablet)
-    & > div
+    & > a
+        text-decoration-line: none
         cursor: pointer
         user-select: none
         color: black !important

@@ -2,6 +2,8 @@
 #page
     nuxt#nuxt
     #background
+
+<!--fait par chaweb github.com/chaweb-->
 </template>
 
 <script>

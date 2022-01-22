@@ -9,10 +9,6 @@ div
     .block(v-for="item in nav_radio" key="name" :id="item.name")
       div(:id="`bloc${item.name}`")
         component(:is="item.name").interne
-  
-  
-    #FondDark(v-if="projects.acad.state || projects.perso.state || projects.other.state" v-on:click="FALSE()")
-      component(v-for="value in projects" :is="`projects-${value.name}`" key="" v-if="value.state" :id="value.name" class="projects")
       
 </template>
 
@@ -27,28 +23,14 @@ export default {
   data () {
     return {
       nav_radio: [
-        {name:"name"},
+        {name:"nom"},
         {name:"project"},
+        {name:"reseaux"}
       ]
     }
     
   },
-  computed: {
-        projects () {
-            return {
-              acad : {name:"acad", 
-                      state: this.$store.state.main.acad},
-              perso : {name:"perso", 
-                      state: this.$store.state.main.perso},
-              other : {name:"other", 
-                      state: this.$store.state.main.other},
-            }
-        }
-    },
   methods: {
-    FALSE(){
-      this.$store.commit(`main/falsemain`)
-    }
   }
 }
 </script>
@@ -135,7 +117,7 @@ export default {
         margin: 10px
 
 
-#blocname
+#blocnom
 
     background-color: $black
     height: 30vh
@@ -164,11 +146,30 @@ export default {
 
     @media screen and (max-height: $portable-h)
       transform: translateY(0)
-      height: calc(90vw - 100px)
+      height: calc(90vh - 100px)
 
     @media screen and (max-width: $portable)
       transform: translateY(0)
       height: 90vh
+
+#blocreseaux
+    background-color: $black
+    height: 40vh
+    width: 50vw
+    padding: 30vh 10vw
+    margin-left: auto
+    @media screen and (max-width: $tablet)
+      width: 80vw
+    @media screen and (max-width: $portable)
+      width: 100vw
+      height: 40vh
+      padding: 30vh 0
+    
+    @media screen and (max-height: $portable-h)
+      width: 50vw
+      height: 80vh
+      padding: 10vh 25vw
+    
 
 
 .block
