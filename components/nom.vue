@@ -1,6 +1,6 @@
 <template lang="pug">
     div Je m'appelle 
-        .title Emris Caron
+        .title Jeanne Caron
         .text Localisé à Rouen
 </template>
 
