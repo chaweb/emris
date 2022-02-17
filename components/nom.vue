@@ -3,7 +3,7 @@
         .title Emris Caron
         .text Localisé à Rouen
 
-        img(src="logo/logo_Original.png")#logo
+        img(src="logo/logo_Original.png" v-if="logo")#logo
 </template>
 
 <style lang="sass" scoped>
@@ -16,3 +16,17 @@
     z-index: -1
 
 </style>
+
+<script>
+export default {
+  data () {
+    return {
+    }
+  },
+  computed: {
+    logo () {
+      return process.client ? window.innerWidth > 956 : false
+    }
+  },
+}
+</script>

@@ -25,7 +25,7 @@ export default {
       nav_radio: [
         {name:"nom"},
         {name:"project"},
-        {name:"reseaux"}
+        {name:"contactez-moi"}
       ]
     }
     
@@ -69,23 +69,6 @@ export default {
       text-decoration: none
       color: black
       @media screen and (min-width: $portable)
-        &:after
-          z-index: -1 
-          opacity: 0
-          width: 0%
-          height: 2px
-          content: ''
-          background: $black
-          transition: all 0.2s
-          display: block
-          position: absolute
-          right: 0px
-          margin:30px
-          margin-top: 50%
-        &:hover::after
-          transition: 0.7s
-          opacity: 1
-          width: calc(100% - 55px)
         &:before
           z-index: -1 
           width: calc(100% - 55px)
@@ -122,8 +105,9 @@ export default {
     background-color: $black
     height: 30vh
     width: 20vw
-    padding: 40vh 10vw
+    padding: 30vh 10vw
     @media screen and (max-width: $tablet)
+        padding: 40vh 10vw
         width: calc(80vw - 180px)
     @media screen and (max-width: $portable) 
         width: 80vw
@@ -152,12 +136,12 @@ export default {
       transform: translateY(0)
       height: 90vh
 
-#blocreseaux
+#bloccontactez-moi
     background-color: $black
     height: 40vh
-    width: 50vw
-    padding: 30vh 10vw
-    margin-left: auto
+    width: 40vw
+    padding: 30vh 5vw
+    margin-right: auto
     @media screen and (max-width: $tablet)
       width: 80vw
     @media screen and (max-width: $portable)
