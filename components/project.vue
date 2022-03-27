@@ -5,7 +5,7 @@ div
         a.content(href="https://drive.google.com/drive/folders/1VRFouVDus7-Nduce0taKASA48JzbryUc" target="_blank")
             center.text Dessins academiques
         a.content(href="https://drive.google.com/drive/folders/1kh31KCmW96h6rLupyKe3A4uGadWDhbkC" target="_blank")
-            center.text Dessins personnelles
+            center.text Dessins personnels
         a.content(href="https://drive.google.com/drive/folders/1WTgfRGAjQ0ZeNoC2bg_TUhi_JfjHMmyK" target="_blank")
             center.text Autres travaux
 

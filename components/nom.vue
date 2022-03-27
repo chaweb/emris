@@ -25,8 +25,9 @@ export default {
   },
   computed: {
     logo () {
-        console.log(process.env.DEPLOY)
-        return process.client || (process.env.DEPLOY ) ? window.innerWidth > 956 : false
+        //console.log(process.env  )
+        //return process.client || false  ? window.innerWidth > 956 : false
+        return true
     }
   },
 }
